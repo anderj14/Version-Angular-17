@@ -1,0 +1,12 @@
+[
+    {
+        "Id": 1,
+        "InsuranceName": "Basic",
+        "InsurancePrice": 100
+    },
+    {
+        "Id": 2,
+        "InsuranceName": "Premium",
+        "InsurancePrice": 150
+    }
+]

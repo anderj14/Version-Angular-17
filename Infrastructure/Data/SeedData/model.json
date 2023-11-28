@@ -1,0 +1,52 @@
+[
+    {
+        "Id": 1,
+        "ModelName": "Camry",
+        "BrandId": 1
+    },
+    {
+        "Id": 2,
+        "ModelName": "Civic",
+        "BrandId": 2
+    },
+    {
+        "Id": 3,
+        "ModelName": "Escape",
+        "BrandId": 3
+    },
+    {
+        "Id": 4,
+        "ModelName": "Malibu",
+        "BrandId": 4
+    },
+    {
+        "Id": 5,
+        "ModelName": "Altima",
+        "BrandId": 5
+    },
+    {
+        "Id": 6,
+        "ModelName": "Elantra",
+        "BrandId": 6
+    },
+    {
+        "Id": 7,
+        "ModelName": "Forte",
+        "BrandId": 7
+    },
+    {
+        "Id": 8,
+        "ModelName": "Impreza",
+        "BrandId": 8
+    },
+    {
+        "Id": 9,
+        "ModelName": "Jetta",
+        "BrandId": 9
+    },
+    {
+        "Id": 10,
+        "ModelName": "Mazda3",
+        "BrandId": 10
+    }
+]

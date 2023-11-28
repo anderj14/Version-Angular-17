@@ -1,0 +1,46 @@
+<div class="back container">
+    <i routerLink="/vehicles" class="bi bi-arrow-left"></i>
+  </div>
+
+<div class="vehicle-details container" *ngIf="vehicle">
+    <div class="info-section">
+        <h2>{{ vehicle.brand }} {{ vehicle.model }}</h2>
+        <div class="info">
+            <div class="titles">
+                <p><strong>Year</strong> </p>
+                <p><strong>Fuel</strong> </p>
+                <p><strong>Rental Price</strong></p>
+                <p><strong>Vehicle Type</strong> </p>
+                <p><strong>Registration N.</strong> </p>
+                <p><strong>Vin</strong></p>
+                <p><strong>Fuel Consumption</strong></p>
+                <p><strong>Passengers</strong></p>
+                <p><strong>Transmission</strong> </p>
+                <p><strong>Doors</strong> </p>
+                <p><strong>Color</strong> </p>
+                <p><strong>Status</strong> </p>
+            </div>
+
+            <div class="data">
+                <p>{{ vehicle.year }}</p>
+                <p>{{ vehicle.fuel }}</p>
+                <p> {{ vehicle.rentalPrice | currency }}</p>
+                <p>{{ vehicle.vehicleType }}</p>
+                <p>AL456S</p>
+                <p> {{ vehicle.vin }}</p>
+                <p> {{ vehicle.fuelConsumption }} MPG</p>
+                <p> {{ vehicle.passengers }}</p>
+                <p>{{ vehicle.transmission }}</p>
+                <p>{{ vehicle.doors }}</p>
+                <p>{{ vehicle.color }}</p>
+                <p>{{ vehicle.status }}</p>
+            </div>
+        </div>
+
+
+        <!-- <div class="action-buttons">
+            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-danger">Delete</button>
+        </div> -->
+    </div>
+</div>

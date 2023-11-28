@@ -1,0 +1,14 @@
+[
+    {
+        "Id": 1,
+        "StatusName": "Reserved"
+    },
+    {
+        "Id": 2,
+        "StatusName": "Rented"
+    },
+    {
+        "Id": 3,
+        "StatusName": "available"
+    }
+]

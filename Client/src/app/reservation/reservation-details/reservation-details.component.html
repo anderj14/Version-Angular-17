@@ -1,0 +1,68 @@
+<div class="back container">
+    <i routerLink="/reservations" class="bi bi-arrow-left"></i>
+</div>
+
+<div class="container">
+    <div class="cards" *ngIf="reservation && customer && vehicle && insurance">
+        <div class="box customer">
+            <h2>Customer Information</h2>
+            <div>
+                <div class="header">
+                    <h3>{{ customer.customerName }}</h3>
+                </div>
+                <div class="body">
+                    <div class="info">
+                        <p>Email</p>
+                        <p>Phone</p>
+                        <p>Driver License</p>
+                    </div>
+                    <div class="data">
+                        <p>{{ customer.email }}</p>
+                        <p>{{ customer.phone }}</p>
+                        <p>{{ customer.driverLicense }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box reservation">
+            <h2>Reservation Information</h2>
+            <div>
+                <div class="header">
+                    <h3>{{vehicle.brand}} {{vehicle.model}}</h3>
+                </div>
+                <div class="body">
+                    <div class="info vehicle">
+                        <p>Vehicle Year</p>
+                        <p>Vehicle Vin</p>
+                        <p>Vehicle N. Identification</p>
+                        <p>Vehicle Type</p>
+                        <p>Vehicle Rental Price</p>
+                        <p>Insurance</p>
+                        <p>Start Date</p>
+                        <p>End Date</p>
+                        <p>Days</p>
+                        <hr>
+                        <p>Total Rental Cost</p>
+                    </div>
+                    <div class="data">
+                        <p>{{vehicle.year}}</p>
+                        <p>{{vehicle.vin}}</p>
+                        <p>AL456S</p>
+                        <p>{{vehicle.vehicleType}}</p>
+                        <p>{{vehicle.rentalPrice | currency}}</p>
+                        <div class="">
+                            <p>{{insurance.insuranceName}} - {{insurance.insurancePrice}}</p>
+                        </div>
+                        <p>{{ reservation.startDate | date }}</p>
+                        <p>{{ reservation.endDate | date }}</p>
+                        <p>{{ reservation.days }} days</p>
+                        <hr>
+                        <p>{{ reservation.rentalCost | currency}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

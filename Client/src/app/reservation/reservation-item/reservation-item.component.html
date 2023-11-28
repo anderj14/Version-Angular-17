@@ -1,0 +1,55 @@
+<div class="content">
+    <div class="cards" *ngFor="let reservation of reservations"
+    routerLink="/reservations/{{reservation.id}}">
+        <div class="box customer">
+            <h2>Customer Information</h2>
+            <div *ngIf="reservation.customer">
+                <div class="header">
+                    <h3>{{ reservation.customer.customerName }}</h3>
+                </div>
+                <div class="body">
+                    <div class="info">
+                        <p>Email</p>
+                        <p>Phone</p>
+                    </div>
+                    <div class="data">
+                        <p>{{ reservation.customer.email }}</p>
+                        <p>{{ reservation.customer.phone }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box reservation">
+            <h2>Reservation Information</h2>
+            <div>
+                <div class="header" *ngIf="reservation.vehicle">
+                    <h3>{{reservation.vehicle.brand}} {{reservation.vehicle.model}}</h3>
+                </div>
+                <div class="body">
+                    <div class="info">
+                        <p>Year</p>
+                        <p>Vin</p>
+                        <p>N. Identification</p>
+                        <p>Insurance</p>
+                        <p>Start Date</p>
+                        <p>End Date</p>
+                        <p>Days</p>
+                    </div>
+                    <div class="data">
+                        <p>{{reservation.vehicle?.year}}</p>
+                        <p>{{reservation.vehicle?.vin}}</p>
+                        <p>AL456S</p>
+                        <div class="" *ngIf="reservation.insurance">
+                            <p>{{reservation.insurance.insuranceName}} - {{reservation.insurance.insurancePrice}}</p>
+                        </div>
+                        <p>{{ reservation.startDate | date }}</p>
+                        <p>{{ reservation.endDate | date }}</p>
+                        <p>{{ reservation.days }} days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

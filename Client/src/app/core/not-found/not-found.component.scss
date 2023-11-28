@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 980px) {
+        display: block;
+    }
+
+
+    .content-letter {
+        h1 {
+            font-size: 13em;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        button {
+            margin-top: 15px;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 35px;
+            color: #fff;
+            background-color: #3da226;
+            font-weight: 400;
+            font-size: 20px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: #32861f;
+            }
+        }
+    }
+
+    .content-image {
+        img {
+            max-width: 500px;
+        }
+    }
+}

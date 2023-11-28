@@ -1,0 +1,42 @@
+[
+    {
+        "Id": 1,
+        "BrandName": "Toyota"
+    },
+    {
+        "Id": 2,
+        "BrandName": "Honda"
+    },
+    {
+        "Id": 3,
+        "BrandName": "Ford"
+    },
+    {
+        "Id": 4,
+        "BrandName": "Chevrolet"
+    },
+    {
+        "Id": 5,
+        "BrandName": "Nissan"
+    },
+    {
+        "Id": 6,
+        "BrandName": "Hyundai"
+    },
+    {
+        "Id": 7,
+        "BrandName": "Kia"
+    },
+    {
+        "Id": 8,
+        "BrandName": "Subaru"
+    },
+    {
+        "Id": 9,
+        "BrandName": "Volkswagen"
+    },
+    {
+        "Id": 10,
+        "BrandName": "Mazda"
+    }
+]

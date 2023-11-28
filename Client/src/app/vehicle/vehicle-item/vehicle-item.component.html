@@ -1,0 +1,31 @@
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Rental Price</th>
+      <th>Vehicle Type</th>
+      <th>Vin</th>
+      <th>Consumption</th>
+      <th>Passengers</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehicle of vehicles" 
+    routerLink="/vehicles/{{vehicle.id}}">
+      <td>{{ vehicle.brand }}</td>
+      <td>{{ vehicle.model }}</td>
+      <td>{{ vehicle.year }}</td>
+      <td>{{ vehicle.rentalPrice | currency }}</td>
+      <td>{{ vehicle.vehicleType }}</td>
+      <td>{{ vehicle.vin }}</td>
+      <td>{{ vehicle.fuelConsumption }} MPG</td>
+      <td>{{ vehicle.passengers }}</td>
+      <td [class]="getStatusClass(vehicle.status)">{{ vehicle.status }}</td>
+    </tr>
+  </tbody>
+</table>

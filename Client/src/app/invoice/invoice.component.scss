@@ -1,0 +1,136 @@
+.content {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+
+    .content-cover {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .table-wrapper {
+        overflow-X: scroll;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .search {
+            display: flex;
+            gap: 10px;
+            // margin-top: 30px;
+
+            @media (max-width: 690px) {
+                display: flex;
+                // align-items: start;
+                // flex-direction: column;
+            }
+
+            input {
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.280);
+                padding: 3px 10px;
+            }
+
+            button {
+                border: none;
+                color: #FFFFFF;
+                border-radius: 5px;
+                background-color: #49AEEE;
+                padding: 3px 20px;
+
+                &:hover {
+                    background-color: #3f92c6;
+
+                }
+
+            }
+        }
+    }
+
+
+    .box-filter {
+        margin-top: 35px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        columns: 2;
+
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            columns: 1;
+            align-items: start;
+
+        }
+
+        .select {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            select {
+                padding: 5px 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #fff;
+                appearance: none;
+                width: 200px;
+                cursor: pointer;
+            }
+
+        }
+
+        .actions {
+            @media (max-width: 600px) {
+                margin-top: 20px;
+
+            }
+
+            button {
+                font-weight: 400;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 12px;
+                margin-left: 10px;
+
+            }
+
+            button.filter {
+                color: #000000;
+                border: 1px solid #011;
+                background-color: #ffffff;
+
+                &:hover {
+                    color: #FFFFFF;
+                    background-color: #2F7F81;
+                    border: none;
+
+                }
+            }
+
+            button.new-vehicle {
+                color: #FFFFFF;
+                background-color: #2F7F81;
+
+                &:hover {
+                    background-color: #ffffff;
+                    color: #000000;
+                    border: 1px solid #011;
+
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "TotalAmount": 120,
+        "Date": "2023-10-01",
+        "PaymentType": "Credit",
+        "CustomerId": 1,
+        "ReservationId": 1
+    },
+    {
+        "Id": 2,
+        "TotalAmount": 170,
+        "Date": "2023-10-02",
+        "PaymentType": "Cash",
+        "CustomerId": 2,
+        "ReservationId": 2
+    }
+]

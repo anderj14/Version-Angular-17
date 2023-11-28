@@ -1,0 +1,31 @@
+<div class="back container">
+    <i routerLink="/customers" class="bi bi-arrow-left"></i>
+  </div>
+
+<div class="vehicle-details container" *ngIf="customer">
+    <div class="info-section">
+        <h2>{{ customer.customerName }}</h2>
+        <div class="info">
+            <div class="titles">
+                <p><strong>Email</strong></p>
+                <p><strong>Phone</strong></p>
+                <p><strong>Driver License</strong></p>
+                <p><strong>Addres</strong></p>
+            </div>
+
+            <div class="data">
+                <p>{{ customer.email }}</p>
+                <p>{{ customer.phone }}</p>
+                <p>{{ customer.driverLicense }}</p>
+                <p>{{ customer.address }}</p>
+                
+            </div>
+        </div>
+
+
+        <!-- <div class="action-buttons">
+            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-danger">Delete</button>
+        </div> -->
+    </div>
+</div>

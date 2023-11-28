@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+
+/* Importing Datepicker SCSS file. */
+
+// @import "./node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+h1,h2,h3,h4, p, a, span, select, option, button, div, th, td{
+    font-family: 'montserrat', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}

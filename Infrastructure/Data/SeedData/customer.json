@@ -1,0 +1,18 @@
+[
+    {
+        "Id": 1,
+        "CustomerName": "John Doe",
+        "Email": "john@example.com",
+        "Phone": "123-456-7890",
+        "DriverLicense": "DL12345",
+        "Address": "123 Main St"
+    },
+    {
+        "Id": 2,
+        "CustomerName": "Jane Smith",
+        "Email": "jane@example.com",
+        "Phone": "456-789-0123",
+        "DriverLicense": "DL67890",
+        "Address": "456 Elm St"
+    }
+]

@@ -1,0 +1,93 @@
+.content {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+
+    .content-cover {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .actions {
+            button {
+                font-weight: 400;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 12px;
+                margin-left: 10px;
+
+            }
+
+            button.new-vehicle {
+                color: #FFFFFF;
+                background-color: #2F7F81;
+
+                &:hover {
+                    background-color: #ffffff;
+                    color: #000000;
+                    border: 1px solid #011;
+
+                }
+            }
+        }
+    }
+
+    .table-wrapper {
+        margin-top: 10px;
+        overflow-X: scroll;
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0px;
+            min-width: max-content;
+        }
+
+        table.table-hover {
+
+
+            thead th {
+                position: sticky;
+                font-weight: 500;
+            }
+
+            tbody tr {
+                background-color: #f3f3f3;
+
+                img {
+                    max-width: 70px;
+                    height: 50px;
+                }
+            }
+
+            td {
+                font-weight: 400;
+
+                button {
+                    background-color: #fff;
+                    border: 1px solid rgba(84, 84, 84, 0.5);
+                    border-radius: 8px;
+                    font-weight: 400;
+
+                    &:hover {
+                        background-color: #e5e5e5;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,71 @@
+i {
+    font-size: 35px;
+    color: #303D50;
+    cursor: pointer;
+    transition: 0.5s;
+  
+    &:hover {
+      color: #6985af;
+      padding: 5px;
+    }
+  }
+  
+  
+  .vehicle-details {
+    display: flex;
+    // justify-content: space-around;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  
+    .image-section {
+      max-width: 40%;
+  
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  
+    .info-section {
+      max-width: 55%;
+      padding-left: 20px;
+  
+      .info {
+        display: flex;
+      }
+  
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        margin: 5px 0;
+  
+        strong {
+          margin-right: 60px;
+        }
+      }
+  
+      .action-buttons {
+        margin-top: 20px;
+  
+        button {
+          margin-right: 10px;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+  
+      .image-section,
+      .info-section {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }

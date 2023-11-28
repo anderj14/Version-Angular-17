@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    color: #343a40;
+
+    &.active {
+        color: #2F7F81;
+    }
+
+    // &:hover {
+    //     color: #666666;
+    // }
+}
+
+
+.logo {
+    cursor: pointer;
+}

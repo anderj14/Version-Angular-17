@@ -1,0 +1,60 @@
+.back {
+    i {
+        font-size: 35px;
+        color: #303D50;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            color: #6985af;
+            padding: 5px;
+        }
+    }
+}
+
+
+.cards {
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    background-color: #fff;
+
+    @media (max-width: 770px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .box {
+        margin: 30px;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #505050;
+        }
+
+        .header {
+
+
+            h3 {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        .body {
+            margin-top: 20px;
+            display: flex;
+
+            p {
+                font-size: 18px;
+                color: #505050;
+            }
+
+            .info {
+                margin-right: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <h4>Internal server error - refreshing will make the error disappear</h4>
+    <ng-container *ngIf="error">
+        <h5 class="text-error">Error: {{error.message}}</h5>
+        <p>This error comes from the server - not the Client</p>
+        <p>What to do next?</p>
+        <ol>
+            <li>Refresh the page to retry.</li>
+            <li>If the problem persists, check your browser's console for technical details.</li>
+            <li>Check the network tab on chrome dev tools</li>
+            <li>If you need additional assistance, <a routerLink="/contact">contact us</a>.</li>
+        </ol>
+        <h5>Stack trace</h5>
+        <div class="error-details">
+            <code class="">{{error.details}}</code>
+        </div>
+    </ng-container>
+</div>

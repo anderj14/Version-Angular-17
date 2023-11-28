@@ -1,0 +1,63 @@
+.back {
+    i {
+        font-size: 35px;
+        color: #303D50;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            color: #6985af;
+            padding: 5px;
+        }
+    }
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+
+
+    .info {
+        margin-bottom: 10px;
+
+
+
+        h2 {
+            font-size: 16px;
+            font-weight: 400;
+            color: #505050;
+        }
+
+        .header {
+
+            h3 {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        .header.name {
+
+            h3 {
+                font-size: 25px;
+                font-weight: 500;
+            }
+        }
+
+        .body {
+            margin-top: 20px;
+            display: flex;
+
+            p {
+                font-size: 18px;
+                color: #505050;
+            }
+
+            .info {
+                margin-right: 65px;
+            }
+        }
+    }
+}

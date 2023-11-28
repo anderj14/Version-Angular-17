@@ -1,0 +1,33 @@
+
+<table class="table table-hover" >
+    <thead>
+        <tr >
+            <th>N. Reservation</th>
+            <th>Customer Name</th>
+            <th>Driver License</th>
+            <th>vehicle</th>
+            <th>Vin</th>
+            <th>Days</th>
+            <th>Insurance</th>
+            <th>Total Costs</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let invoice of invoices">
+        <tr *ngIf="invoice.customer && invoice.reservation" 
+        routerLink="/invoices/{{invoice.id}}">
+            <td>{{ invoice.reservation.id }}</td>
+            <td>{{ invoice.customer.customerName }}</td>
+            <td>{{ invoice.customer.driverLicense }}</td>
+            <td>{{ invoice.reservation.vehicle?.brand}} {{ invoice.reservation.vehicle?.model}} {{ invoice.reservation.vehicle?.year}}</td>
+            <td>{{invoice.reservation.vehicle?.vin}}</td>
+            <td>{{ invoice.reservation.days }}</td>
+            <td>{{ invoice.reservation.insurance?.insuranceName}}</td>
+            <td>{{ invoice.totalAmount | currency}}</td>
+            <td>
+                <button class="m-2 bi bi-trash">Update</button>
+                <button class="m-2 bi bi-pen">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,292 @@
+
+<section class="vehicle-edit mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <form #vehicleForm="ngForm" (ngSubmit)="onSubmit(vehicleForm.valid && vehicleForm.value)">
+          <div class="form-row">
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="vehicleName">Vehicle Name</label>
+              <input 
+              type="text"
+              name="vehicleName"
+              id="name"
+              placeholder="Vehicle Name"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': name.invalid && (name.dirty || name.touched)}"
+              #name="ngModel"
+              [(ngModel)]="vehicle.vehicleName"
+              >
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="invalid-feedback">
+                <div *ngIf="name.errors?.['required']" >
+                  Vehicle Name is required
+                </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="rentalPrice">Price</label>
+              <input 
+              type="text"
+              [ngClass]="{'is-invalid': rentalPrice.invalid && (rentalPrice.dirty || rentalPrice.touched)}"
+              required
+              class="form-control"
+              id="rentalPrice"
+              placeholder="Price"
+              currencyMask
+              name="rentalPrice"
+              #rentalPrice="ngModel"
+              pattern="^\$?([0-9]{1,3},([0-9]{3},)*[0-9]{3}|[0-9]+)(\.[0-9][0-9])?$"
+              [min]="0.01"
+              [ngModel]="+vehicle.rentalPrice | number: '1.2-2'"
+              (ngModelChange)="updatePrice(+$event)"
+              >
+              <div *ngIf="rentalPrice.invalid && (rentalPrice.dirty || rentalPrice.touched)" class="invalid-feedback">
+                <div *ngIf="rentalPrice.errors?.['required']">
+                  Vehicle rental price is required
+                </div>
+                <div *ngIf="rentalPrice.errors?.['pattern']">
+                  Vehicle rental price needs to be decimal value
+                </div>
+                <div *ngIf="rentalPrice.errors?.['min']">
+                  Vehicle rental price must be greater than zero
+                </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="year">Year</label>
+              <input 
+              type="number"
+              name="year"
+              id="year"
+              placeholder="Year"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': year.invalid && (year.dirty || year.touched)}"
+              #year="ngModel"
+              [(ngModel)]="vehicle.year"
+              >
+              <div *ngIf="year.invalid && (year.dirty || year.touched)" class="invalid-feedback">
+                <div *ngIf="year.errors?.['required']" >
+                  Vehicle year is required
+              </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="vin">VIN</label>
+              <input 
+              type="text"
+              name="vin"
+              id="vin"
+              placeholder="VIN"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': vin.invalid && (vin.dirty || vin.touched)}"
+              #vin="ngModel"
+              [(ngModel)]="vehicle.vin"
+              >
+              <div *ngIf="vin.invalid && (vin.dirty || vin.touched)" class="invalid-feedback">
+                <div *ngIf="vin.errors?.['required']" >
+                  Vehicle vin is required
+              </div>
+              </div>
+            </div>
+<!--  -->                   
+            <div class="form-group col-md-6">
+              <label for="transmission">Transmission</label>
+              <input 
+              type="text"
+              name="transmission"
+              id="transmission"
+              placeholder="Transmission"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': transmission.invalid && (transmission.dirty || transmission.touched)}"
+              #transmission="ngModel"
+              [(ngModel)]="vehicle.transmission"
+              >
+              <div *ngIf="transmission.invalid && (transmission.dirty || transmission.touched)" class="invalid-feedback">
+                <div *ngIf="transmission.errors?.['required']" >
+                  Vehicle transmission is required
+              </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="door">Doors</label>
+              <input 
+              type="number"
+              name="door"
+              id="door"
+              placeholder="doors"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': door.invalid && (door.dirty || door.touched)}"
+              #door="ngModel"
+              [(ngModel)]="vehicle.doors"
+              >
+              <div *ngIf="door.invalid && (door.dirty || door.touched)" class="invalid-feedback">
+                <div *ngIf="door.errors?.['required']" >
+                  Vehicle doors is required
+              </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="passengers">Passengers</label>
+              <input 
+              type="number"
+              name="passengers"
+              id="passengers"
+              placeholder="passengers"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': passengers.invalid && (passengers.dirty || passengers.touched)}"
+              #passengers="ngModel"
+              [(ngModel)]="vehicle.passengers"
+              >
+              <div *ngIf="passengers.invalid && (passengers.dirty || passengers.touched)" class="invalid-feedback">
+                <div *ngIf="passengers.errors?.['required']" >
+                  Vehicle doors is required
+              </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="color">Color</label>
+              <input 
+              type="text"
+              name="color"
+              id="color"
+              placeholder="color"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': color.invalid && (color.dirty || color.touched)}"
+              #color="ngModel"
+              [(ngModel)]="vehicle.color"
+              >
+              <div *ngIf="color.invalid && (color.dirty || color.touched)" class="invalid-feedback">
+                <div *ngIf="color.errors?.['required']" >
+                  Vehicle color is required
+              </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="fuelConsumption">Fuel Consumption</label>
+              <input 
+              type="number"
+              name="fuelConsumption"
+              id="fuelConsumption"
+              placeholder="Fuel Consumption MPG"
+              required
+              class="form-control"
+              [ngClass]="{'is-invalid': fuelConsumption.invalid && (fuelConsumption.dirty || fuelConsumption.touched)}"
+              #fuelConsumption="ngModel"
+              [(ngModel)]="vehicle.fuelConsumption"
+              >
+              <div *ngIf="fuelConsumption.invalid && (fuelConsumption.dirty || fuelConsumption.touched)" class="invalid-feedback">
+                <div *ngIf="fuelConsumption.errors?.['required']" >
+                  Vehicle fuel consumption is required
+              </div>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="brand">Brand</label>
+                <select 
+                name="brandId" 
+                id="brand" 
+                class="form-control"
+                [(ngModel)]="vehicle.brandId"
+                required
+                >
+                <option
+                *ngFor="let brand of brands"
+                [selected]="vehicle.brandId === brand.id"
+                [ngValue]="brand.id" 
+                >{{brand.brandName}}</option>
+              </select>
+              </div>
+<!--  -->
+              <div class="form-group col-md-6">
+                <label for="model">Model</label>
+                <select 
+                name="modelId" 
+                id="model" 
+                class="form-control"
+                [(ngModel)]="vehicle.modelId"
+                required
+                >
+                <option
+                *ngFor="let model of models"
+                [selected]="vehicle.modelId === model.id"
+                [ngValue]="model.id" 
+                >{{model.modelName}}</option>
+                </select>
+              </div>
+<!--  -->
+              <div class="form-group col-md-6">
+                <label for="status">Status</label>
+                <select 
+                name="statusId" 
+                id="status" 
+                class="form-control"
+                [(ngModel)]="vehicle.statusId"
+                required
+                >
+                <option
+                *ngFor="let status of statuses"
+                [selected]="vehicle.statusId === status.id"
+                [ngValue]="status.id" 
+                >{{status.statusName}}</option>
+                </select>
+              </div>
+<!--  -->
+              <div class="form-group col-md-6">
+                <label for="fuel">Fuel</label>
+                <select 
+                name="fuelId" 
+                id="fuel" 
+                class="form-control"
+                [(ngModel)]="vehicle.fuelId"
+                required
+                >
+                <option
+                *ngFor="let fuel of fuels"
+                [selected]="vehicle.fuelId === fuel.id"
+                [ngValue]="fuel.id" 
+                >{{fuel.fuelName}}</option>
+                </select>
+              </div>
+            </div>
+<!--  -->
+            <div class="form-group col-md-6">
+              <label for="vehicleType">Vehicle Type</label>
+              <select 
+              name="vehicleTypeId" 
+              id="vehicleType" 
+              class="form-control"
+              [(ngModel)]="vehicle.vehicleTypeId"
+              required
+              >
+              <option
+              *ngFor="let vehicleType of vehiclesType"
+              [selected]="vehicle.vehicleTypeId === vehicleType.id"
+              [ngValue]="vehicleType.id" 
+              >{{vehicleType.vehicleTypeName}}</option>
+              </select>
+            </div>
+          </div>
+<!--  -->
+          <button [disabled]="!vehicleForm.valid" type="submit" class="btn btn-primary my-3 float-right">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

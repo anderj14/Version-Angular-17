@@ -1,0 +1,76 @@
+<div class="back">
+    <i routerLink="/invoices" class="bi bi-arrow-left"></i>
+</div>
+
+<div class="container">
+    <div *ngIf="invoice && reservation && customer">
+        <div class="info customer">
+            <!-- <h2>Customer Information</h2> -->
+            <div class="header name">
+                <h3>{{ customer.customerName }} Invoice</h3>
+            </div>
+            <div class="body">
+                <div class="info">
+                    <p>Email</p>
+                    <p>Phone</p>
+                    <p>Driver License</p>
+                </div>
+                <div class="data">
+                    <p>{{ customer.email }}</p>
+                    <p>{{ customer.phone }}</p>
+                    <p>{{ customer.driverLicense }}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="info reservation">
+            <h2>Description Vehicle</h2>
+            <div>
+                <div class="header">
+                    <h3>{{ vehicle.brand }} {{ vehicle.model }}</h3>
+                </div>
+                <div class="body">
+                    <div class="info">
+                        <p>Year</p>
+                        <p>Vin</p>
+                        <p>N. Identification</p>
+                        <p>Type</p>
+                        <p>Rental Price</p>
+                        <p>Insurance</p>
+                        <p>Start Date</p>
+                        <p>End Date</p>
+                        <p>Days</p>
+                    </div>
+                    <div class="data">
+                        <p>{{ vehicle.year }}</p>
+                        <p>{{ vehicle.vin }}</p>
+                        <p>AL456S</p>
+                        <p>{{ vehicle.vehicleType }}</p>
+                        <p>{{ vehicle.rentalPrice | currency }}</p>
+                        <div class="">
+                            <p>{{ insurance.insuranceName }} - {{ insurance.insurancePrice }}</p>
+                        </div>
+                        <p>{{ reservation.startDate | date }}</p>
+                        <p>{{ reservation.endDate | date }}</p>
+                        <p>{{ reservation.days }} days</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="info info">
+            <h2>Total Invoice</h2>
+            <div class="body">
+                <div class="info">
+                    <p>Payment Type</p>
+                    <p>Total</p>
+                </div>
+                <div class="data">
+                    <p>{{ invoice.paymentType }}</p>
+                    <p>{{ invoice.totalAmount | currency}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

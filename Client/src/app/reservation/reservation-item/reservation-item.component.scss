@@ -1,0 +1,55 @@
+p {
+    font-size: 18px;
+    color: #505050;
+
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #505050;
+}
+
+.content {
+    gap: 30px;
+    display: flex;
+
+    @media (max-width: 1450px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.cards {
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+
+    @media (max-width: 1450px) {
+        margin-top: 18px;
+    }
+
+    @media (max-width: 770px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.box {
+    margin: 30px;
+
+    .body {
+        margin-top: 20px;
+        display: flex;
+
+        .info {
+            margin-right: 15px;
+        }
+    }
+}

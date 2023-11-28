@@ -1,0 +1,10 @@
+[
+    {
+        "Id": 1,
+        "VehicleTypeName": "Sedan"
+    },
+    {
+        "Id": 2,
+        "VehicleTypeName": "SUV"
+    }
+]
